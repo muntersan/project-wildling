@@ -1,27 +1,30 @@
 :root {
-  --font-sans: "sans-serif";
-  --font-serif: serif;
+  --font-sans: "poppins","sans-serif";
+  --font-serif: "stolzl", serif;
   --font-base: 1rem;
   --font-scale: 1.25;
+  --font-size-small: 0.75rem;
   --font-size-1: var(--font-base);
-  --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
+  --font-size-2: calc( var(--font-size-1) * var(--font-scale));
   --font-size-3: calc( var(--font-size-2) * var(--font-scale));
   --font-size-4: calc( var(--font-size-3) * var(--font-scale));
   --font-size-5: calc( var(--font-size-4) * var(--font-scale));
   --font-size-6: calc( var(--font-size-5) * var(--font-scale));
-  --color-accent: cadetblue;
+  --color-accent-dark: #2B5F6C;
+  --color-accent-light: #E19772;
   --color-light: #fff;
-  --color-medium: #666;
-  --color-dark: #333;
+  --color-light-medium: #FFFBF8;
+  --color-medium: #EED8CA;
+  --color-dark: #463233;
   --section-gap: 8rem;
   --section-gap-inner: calc( var(--section-gap) * 0.75);
   --section-gap-inner-small: calc( var(--section-gap) * 0.5);
   --grid-gap: 3rem;
-  --page-width: 78rem;
+  --page-width: 80rem;
   --page-padding: 30px;
   --content-width: 55rem;
   --content-width-small: 40rem;
-  --menu-height: 100px;
+  --menu-height: 80px;
   --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0,var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
   --grid-content: repeat(12, 1fr);
 }
@@ -41,11 +44,16 @@ img {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-sans);
+figure {
+  margin: 0;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
 }
 
 h1 {
+  font-family: var(--font-sans);
   font-size: var(--font-size-6);
 }
 
@@ -72,6 +80,20 @@ h6 {
 p, a, li {
   line-height: 1.5;
   font-family: var(--font-serif);
+}
+
+.site-header {
+  height: var(--menu-height);
+  background-color: var(--color-medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header .branding {
+  margin-left: var(--page-padding);
+}
+.site-header .menu {
+  margin-right: var(--page-padding);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+.site-header {
+    height: var(--menu-height);
+    background-color: var(--color-medium);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .branding{
+        margin-left: var(--page-padding);
+     }
+
+    .menu{
+        margin-right: var(--page-padding);
+     }
+}
