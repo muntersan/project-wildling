@@ -1,10 +1,13 @@
 .site-header {
     height: var(--menu-height);
-    background-color: var(--color-medium);
+    //background-color: var(--color-medium); //on scroll
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    position: absolute;
+    width: 100vw;
+    z-index: 999;
+
     .branding{
         margin-left: var(--page-padding);
      }

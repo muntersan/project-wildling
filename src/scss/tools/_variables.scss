@@ -16,8 +16,8 @@
     --font-size-6: calc( var(--font-size-5) * var(--font-scale)); //48,8
 
     //colors
-    --color-accent-dark: #2B5F6C;
-    --color-accent-light: #E19772;
+    
+    --color-accent: #E19772;
     --color-light: #fff;
     --color-light-medium: #FFFBF8;
     --color-medium: #EED8CA;
@@ -37,14 +37,14 @@
 
     //content settings
     --content-width: 55rem;
-    --content-width-small: 40rem;
+    --content-width-small: 25rem;
 
     //menu settings
     --menu-height: 80px;
 
     //grids
     --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0,var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
-    --grid-content: repeat(12, 1fr);
+    --grid-content: 1fr [wide-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [wide-end] 1fr;
 
 
 }

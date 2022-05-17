@@ -1,7 +1,12 @@
-
-h2, h3, h4, h5, h6 {
+body {
+    color: var(--color-dark);
     font-family: var(--font-serif);
 }
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
 
 h1 {
     font-family: var(--font-sans);
@@ -30,5 +35,10 @@ h6 {
 
 p, a, li {
     line-height: 1.5;
-    font-family: var(--font-serif);
+    font-weight: 300;
+    
+}
+
+p {
+    margin-bottom: 1.5rem;
 }
