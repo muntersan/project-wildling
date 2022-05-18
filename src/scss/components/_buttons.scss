@@ -18,4 +18,22 @@
         color: $hover-text;
     }
 }
+@mixin light($background: none, $color: var(--color-dark), $border-radius: 0px,  $hover-text: var(--color-accent) ) {
+    background: $background;
+    color: $color;
+    display: inline-block;
+    text-decoration: none;
+    width: 180px;
+    height: 50px;
+    border-radius: $border-radius;
+    font-size: var(--font-size-2);
+    font-family: var(--font-sans);
+    border: 1px solid var(--color-dark);
+    cursor: pointer;
+
+    &:hover {
+        
+        color: $hover-text;
+    }
+}
 

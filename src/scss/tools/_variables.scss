@@ -33,18 +33,18 @@
 
     //page settings
     --page-width: 80rem;
-    --page-padding: 30px;
+    --page-padding: 50px;
 
     //content settings
     --content-width: 55rem;
-    --content-width-small: 25rem;
+    --content-width-small: 34rem;
 
     //menu settings
     --menu-height: 80px;
 
     //grids
     --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0,var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
-    --grid-content: 1fr [wide-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [wide-end] 1fr;
+    --grid-content: 1fr  1fr [wide-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [wide-end] 1fr  1fr;
 
 
 }
