@@ -1,0 +1,87 @@
+@use '../components/buttons' as button;
+@use '../tools/responsive';
+
+.products{
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    
+
+    &__header{
+        grid-column: inner;
+        max-width: 500px;
+        text-align: center;
+        justify-self: center;
+        margin-bottom: 3rem;
+
+    }
+
+    &__content{
+        grid-column: inner;
+        display: flex;
+        justify-content: space-between;
+
+        @include responsive.max($breakpoint:800px){
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+
+    .product{
+        margin-right: 1rem;
+        
+
+        &:last-of-type{
+            margin-right: 0;
+            margin-left: 1rem;
+
+            @include responsive.max($breakpoint:800px){
+                margin: 0;
+            }
+        }
+
+        @include responsive.max($breakpoint:800px){
+            margin-right: 0;
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+
+        &__title{
+            margin: 2rem 0 1.5rem 0;
+        }
+
+       &__description{
+            max-width: 30rem;
+            margin: 0 0.5rem 2rem 0;
+
+           @include responsive.max($breakpoint:800px){
+            margin: 0 3rem;
+            max-width: none;
+
+        }
+       }
+
+       &__buttons{
+        margin-top: 3rem;
+            @include responsive.max($breakpoint:500px){
+                display: flex;
+                flex-direction: column;
+                align-items: center
+            }
+       }
+
+    }
+
+    .button__view{
+        @include button.standard;
+        margin-right: 3rem;
+        margin-bottom: 1rem;
+        @include responsive.max($breakpoint:900px){
+            margin-right: 0;
+        }
+
+    }
+    .button__add{
+        @include button.light;
+    }
+}

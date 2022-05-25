@@ -1,3 +1,5 @@
+@use '../tools/responsive';
+
 :root {
 
     //fonts
@@ -32,10 +34,11 @@
     --grid-gap: 3rem;
 
     //page settings
-    --page-width: 80rem;
-    --page-padding: 50px;
+    --page-width: 74.5rem;
+    --page-padding: 5rem;
 
     //content settings
+    
     --content-width: 55rem;
     --content-width-small: 34rem;
 
@@ -45,6 +48,10 @@
     //grids
     --grid-container: minmax(var(--page-padding), 1fr) [inner-start] minmax(0,var(--page-width)) [inner-end] minmax(var(--page-padding), 1fr);
     --grid-content: 1fr  1fr [wide-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [wide-end] 1fr  1fr;
+
+    @include responsive.max($breakpoint: 960px){
+        --page-padding: 2.5rem;
+    }
 
 
 }

@@ -1,3 +1,5 @@
+@use '../tools/responsive';
+
 .footer{
     display: grid;
     grid-template-columns: var(--grid-container);
@@ -7,10 +9,23 @@
         display: flex;
         justify-content: space-between;
         padding: 2rem 0 6rem 0;
+
+        @include responsive.max($breakpoint:800px){
+            flex-direction: column;
+            
+        }
+
     }
 
     .brand__info{
         max-width: 17rem;
+
+        @include responsive.max($breakpoint:800px){
+            margin-bottom: 5rem;
+            max-width: 25rem;
+        }
+
+        
     }
 
     .brand__socials{
@@ -27,16 +42,39 @@
 
     &__menus{
         display: flex;
+
+        @include responsive.max($breakpoint:500px){
+            flex-direction: column;
+        }
+        
     }
 
     &__menu{
         margin-left: 2.5rem;
+        justify-content: space-between;
 
+        @include responsive.max($breakpoint:800px){
+            margin-bottom: 2rem;
+            &:first-of-type{
+                margin-left: 0;
+
+            }
+        }
+
+        @include responsive.max($breakpoint:500px){
+            margin-left: 0;
+            margin-top: 1rem;
+        }
 
         .menu__title{
             font-weight: 400;
             margin-bottom: 1rem;
             font-size: 22px;
+
+            @include responsive.max($breakpoint:800px){
+                font-size: 18px;
+            }
+            
         }
         .menu__list{
             list-style: none;
@@ -54,6 +92,10 @@
             font-weight: 200;
             &:hover{
                 color: var(--color-accent);
+            }
+
+            @include responsive.max($breakpoint:800px){
+                font-size: 16px;
             }
         }
 

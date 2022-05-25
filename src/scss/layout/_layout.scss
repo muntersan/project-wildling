@@ -1,98 +1,17 @@
 @use '../components/buttons' as button;
+@use '../tools/responsive';
+
 .section {
     margin-top: 100px;
-   margin-bottom: 150px;
-}
-.about {
-   
-    display: grid;
-    grid-template-columns: var(--grid-container);
+    margin-bottom: 150px;
 
-    &__inner{
-        grid-column: inner;
-        display: flex;
-        justify-content: space-between;
+    @include responsive.max($breakpoint:800px){
+        margin-bottom: 80px;
     }
 
-    &__img-1{
-        margin-bottom: 3rem;
-    }
-
-    &__content {
-        max-width: var(--content-width-small);
-        width: 100%;
-
-        margin: 0 1.5rem 0 1.5rem;
-
-        &:first-of-type{
-            margin-top: 4rem; 
-        }
-
-
-        .button__learnmore{
-            @include button.standard;
-            margin-bottom: 7.5rem;
-            margin-top: 1rem;
-        }
-        .button__shop{
-            @include button.light;
-            margin-top: 1rem;
-        }
-
-        p {
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            max-width: 27rem;
-        }
-    }
-
-    
 
 }
 
-.products{
-    display: grid;
-    grid-template-columns: var(--grid-container);
-    
-
-    &__header{
-        grid-column: inner;
-        max-width: 500px;
-        text-align: center;
-        justify-self: center;
-        margin-bottom: 3rem;
-
-    }
-
-    &__content{
-        grid-column: inner;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .product{
-        margin: 0 1.5rem 0 1.5rem;
-        max-width: var(--content-width-small);
-
-        &__title{
-            margin: 2rem 0 1.5rem 0;
-        }
-
-       &__description{
-           height: 12rem;
-           max-width: 30rem;
-           margin: 0
-       }
-    }
-
-    .button__view{
-        @include button.standard;
-        margin-right: 3rem
-    }
-    .button__add{
-        @include button.light;
-    }
-}
 
 .banner{
     background-color: var(--color-light-medium);
@@ -104,138 +23,27 @@
     &__content{
         text-align: center;
         height: 100px;
-        border-right: 3px solid var(--color-dark);
-        padding-right: 10%;
+    }
 
-        &:last-of-type{
-            border: none;
-            padding: 0;
-        }
+    .separator{
+        height: 100px;
+        width: 2px;
+        background-color: var(--color-dark);
+        margin: 0 1rem;
     }
 
     &__title{
         font-weight: 500;
-        opacity: 0.7;
+        opacity: 0.9;
+        @include responsive.max($breakpoint:900px){
+            font-size: var(--font-size-3);
+        }
     }
     &__info{
         font-size: var(--font-size-small);
         margin-bottom: 0;
-    }
-}
-
-.regimen{
-    display: grid;
-    grid-template-columns: var(--grid-container);
-
-    &__inner{
-        grid-column: inner;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-    }
-
-    &__img {
-        max-width: 540px;
-        box-shadow: -30px 30px 0 var(--color-medium);
-    }
-
-    &__content{
-        max-width: 480px;
-        margin-left: 50px;
-
-        .button__create{
-            @include button.standard;
-            margin-top: 2rem;
-        }
-
-    }
-
-    &__title{
-        font-size: var(--font-size-6);
-        font-weight: 300;
-        margin-bottom: 2rem;
-    }
-}
-
-.reviews {
-    background-color: var(--color-light-medium);
-    display: grid;
-    grid-template-columns: var(--grid-container);
-    padding-bottom: 50px;
-    padding-top: 100px;
-
-    &__inner{
-        grid-column: inner;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .links{
-            display: flex;
-            justify-content: space-between;
-        }
-        .link{
-            margin: 3rem 1rem 1rem 1rem;
-        }
-        
-        
-    }
-
-    &__header{
-        text-align: center;
-    
-        p{
-            font-size: var(--font-size-2);
-            font-weight: 200;
-            max-width: 600px;
-            margin-bottom: 5rem;
+        @include responsive.max($breakpoint:900px){
+            font-size: 10px;
         }
     }
-
-    &__title{
-        font-weight: 300;
-        margin-bottom: 2rem;
-        
-    }
-
-    &__boxes{
-        display: flex;
-        justify-content: space-evenly;
-
-        .review {
-
-            &__box{
-            background-color: var(--color-light);
-            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.16);
-            width: 300px;
-            height: 300px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin-right: 5rem;
-
-            &:last-of-type{
-                margin: 0;
-            }
-            }
-
-            &__stars{
-                max-width: 146px;
-            }
-            &__text{
-                font-weight: 200;
-            }
-
-            &__author{
-                font-weight: 400;
-            }
-
-        }
-        
-    }
-
-
-
 }
