@@ -1,3 +1,5 @@
+@use '../tools/responsive';
+
 .menu {
     display: flex;
      a{
@@ -17,7 +19,17 @@
         left: 100%;
         transform: translateY(30%);
     }
+
+    @include responsive.max($breakpoint: 300px){
+        display: none;
+    }
    
+}
+
+.my-pages{
+    @include responsive.max($breakpoint: 300px){
+        display: none;
+    }
 }
 
 .menu-button {
@@ -63,6 +75,11 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s;
+    position: fixed;
+    background-color: rgba($color: #F4D9C8, $alpha: 0.8);
+    padding: 1rem 3rem 3rem 3rem;
+    right: 0;
+    z-index: 999;
 
     &__list{
         list-style: none;
@@ -80,6 +97,8 @@
 
         }
     }
+
+    
 }
 
 .menu--opened {
@@ -91,4 +110,10 @@
 .menu-button--close .menu-button__hamburger::before,
 .menu-button--close .menu-button__hamburger::after {
     background-color: var(--color-accent);
+}
+
+.dropdown--scrolled{
+    background-color: var(--color-light-medium);
+    padding: 1rem 3rem 3rem 3rem;
+    right: 0;
 }

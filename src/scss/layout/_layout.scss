@@ -4,10 +4,12 @@
 .section {
     margin-top: 100px;
     margin-bottom: 150px;
+   
 
     @include responsive.max($breakpoint:800px){
         margin-bottom: 80px;
     }
+
 
 
 }
@@ -22,7 +24,7 @@
 
     &__content{
         text-align: center;
-        height: 100px;
+        
     }
 
     .separator{
@@ -36,7 +38,10 @@
         font-weight: 500;
         opacity: 0.9;
         @include responsive.max($breakpoint:900px){
-            font-size: var(--font-size-3);
+            font-size: var(--font-size-2);
+        }
+        @include responsive.max($breakpoint:600px){
+            font-size: var(--font-size-small);
         }
     }
     &__info{
@@ -44,6 +49,9 @@
         margin-bottom: 0;
         @include responsive.max($breakpoint:900px){
             font-size: 10px;
+        }
+        @include responsive.max($breakpoint:600px){
+            font-size: 7px;
         }
     }
 }

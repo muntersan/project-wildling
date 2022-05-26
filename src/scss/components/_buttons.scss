@@ -1,5 +1,7 @@
+@use '../tools/responsive';
 
 @mixin standard($background: var(--color-dark), $color: var(--color-light), $border-radius: 0px, $hover: var(--color-dark), $hover-text: var(--color-medium) ) {
+
     background-color: $background;
     color: $color;
     display: inline-block;
@@ -16,6 +18,11 @@
     &:hover {
         background-color: $hover;
         color: $hover-text;
+    }
+
+    @include responsive.max($breakpoint: 500px){
+        font-size: var(--font-size-1);
+        height: 40px;
     }
 }
 @mixin light($background: none, $color: var(--color-dark), $border-radius: 0px,  $hover-text: var(--color-accent) ) {
@@ -34,6 +41,11 @@
     &:hover {
         
         color: $hover-text;
+    }
+
+    @include responsive.max($breakpoint: 500px){
+        font-size: var(--font-size-1);
+        height: 40px;
     }
 }
 

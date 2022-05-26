@@ -1,3 +1,5 @@
+@use '../tools/responsive';
+
 body {
     color: var(--color-dark);
     font-family: var(--font-serif);
@@ -11,16 +13,28 @@ h1,h2,h3,h4,h5,h6{
 h1 {
     font-size: var(--font-size-6);
     font-weight: 400;
+
+    @include responsive.max($breakpoint: 500px){
+        font-size: var(--font-size-4);
+    }
 }
 
 h2 {
     font-size: var(--font-size-5);
     font-weight: 300;
 
+    @include responsive.max($breakpoint: 500px){
+        font-size: var(--font-size-3);
+    }
+
 }
 
 h3 {
     font-size: var(--font-size-4);
+
+    @include responsive.max($breakpoint: 500px){
+        font-size: var(--font-size-2);
+    }
 }
 
 h4 {
@@ -39,6 +53,9 @@ p, a, li {
     line-height: 1.7;
     font-weight: 300;
     font-size: var(--font-size-1);
+    @include responsive.max($breakpoint: 500px){
+        font-size: var(--font-size-small);
+    }
     
 }
 

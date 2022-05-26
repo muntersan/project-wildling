@@ -4,19 +4,28 @@
 .products{
     display: grid;
     grid-template-columns: var(--grid-container);
+
+    &__inner{
+        grid-column: inner;
+    }
     
 
     &__header{
-        grid-column: inner;
-        max-width: 500px;
         text-align: center;
-        justify-self: center;
         margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+            max-width: 500px;
+        }
+
+        
 
     }
 
     &__content{
-        grid-column: inner;
+        
         display: flex;
         justify-content: space-between;
 

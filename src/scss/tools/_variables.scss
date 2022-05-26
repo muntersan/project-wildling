@@ -22,7 +22,7 @@
     --color-accent: #E19772;
     --color-light: #fff;
     --color-light-medium: #FAF0E8;
-    --color-medium: #EED8CA;
+    --color-medium: #F4D6C4;
     --color-dark: #463233;
 
     //section gaps
@@ -51,6 +51,9 @@
 
     @include responsive.max($breakpoint: 960px){
         --page-padding: 2.5rem;
+    }
+    @include responsive.max($breakpoint: 500px){
+        --grid-container: 0 [inner-start] minmax(0,var(--page-width)) [inner-end] 0;
     }
 
 

@@ -17,7 +17,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+    
     }
 
     &__img{
@@ -28,6 +28,13 @@
 
         &-2{
             margin-top: 5rem;
+        }
+    }
+
+    &__title{
+        @include responsive.max($breakpoint: 500px){
+            margin: 1.5rem;
+            
         }
     }
 
@@ -43,7 +50,7 @@
 
             &:last-of-type{
                 margin-right: 0;
-                 margin-left: 1rem;
+                margin-left: 1rem;
 
                 @include responsive.max($breakpoint:800px){
                     margin: 0;
@@ -67,6 +74,9 @@
             @include responsive.max($breakpoint:800px){
                 max-width: none;
                 margin: 1rem 3rem;
+            }
+            @include responsive.max($breakpoint: 500px){
+                margin: 1.5rem;
             }
 
 
