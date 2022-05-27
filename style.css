@@ -435,6 +435,7 @@ p {
   background-color: var(--color-light-medium);
   padding: 1rem 3rem 3rem 3rem;
   right: 0;
+  height: 100vh;
 }
 
 .hero {
